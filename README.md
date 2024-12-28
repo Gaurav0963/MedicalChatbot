@@ -23,7 +23,7 @@ Before running the project, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/chatbot-project.git
+   git clone https://github.com/Gaurav0963/MedicalChatbot.git
    cd chatbot-project
    ```
 
@@ -57,7 +57,7 @@ Before running the project, ensure you have the following installed:
 
 2. Train the chatbot model:
    ```bash
-   python train_chatbot.py
+   python build_model.py
    ```
    This script will preprocess the data, train the model, and save it as `chatbot_model.keras`.
 
@@ -65,7 +65,7 @@ Before running the project, ensure you have the following installed:
 
 1. Start the chatbot interface:
    ```bash
-   python run_chatbot.py
+   python bot.py
    ```
 
 2. Type your queries in the console and get responses from the chatbot.
@@ -79,10 +79,11 @@ To evaluate the chatbot's performance, review the classification report and conf
 ```
 .
 ├── intents.json           # Intent definitions
-├── train_chatbot.py       # Training script
-├── run_chatbot.py         # Chatbot inference script
+├── src/build_model.py     # Training script
+├── src/bot.py             # Chatbot inference script
+├── src/utils.py           # Utility functions for preprocessing and plotting
 ├── requirements.txt       # Python dependencies
-├── results/               # Training results and saved models
+├── results/               # Training results
 ├── utils/                 # Utility functions for preprocessing and plotting
 └── README.md              # Project documentation
 ```
@@ -94,12 +95,12 @@ To evaluate the chatbot's performance, review the classification report and conf
 1. Update the `intents.json` file with new tags, patterns, and responses.
 2. Retrain the model by running:
    ```bash
-   python train_chatbot.py
+   python build_model.py
    ```
 
 ### Adjusting Model Parameters
 
-Modify the hyperparameters in `train_chatbot.py` to suit your dataset and hardware configuration. For example, you can change the number of epochs, batch size, or learning rate.
+Modify the hyperparameters in `build_model.py` to suit your dataset and hardware configuration. For example, you can change the number of epochs, batch size, or learning rate.
 
 ## Troubleshooting
 
@@ -120,9 +121,6 @@ Refer to the [TensorFlow GPU Guide](https://www.tensorflow.org/install/gpu) for 
 
 Contributions are welcome! Feel free to open issues or submit pull requests for bug fixes, feature enhancements, or documentation improvements.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgments
 
