@@ -6,6 +6,16 @@ __pycache__/
 # C extensions
 *.so
 
+# Custom
+results
+src/botmp3.py
+src/build.py
+*.pkl
+*.keras
+*.docx
+*.mp3
+*.pdf
+
 # Distribution / packaging
 .Python
 build/
